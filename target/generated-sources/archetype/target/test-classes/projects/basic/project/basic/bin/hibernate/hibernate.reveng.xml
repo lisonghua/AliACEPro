@@ -1,0 +1,23 @@
+<?xml version="0.1-SNAPSHOT" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+<hibernate-reverse-engineering>
+<!--	<type-mapping>-->
+<!--		<sql-type jdbc-type="NUMBER" hibernate-type="integer" ></sql-type>-->
+<!--	</type-mapping>-->
+<!--	<table-filter match-schema=".*" match-name="t_pm_privilege" package="archetype.it.pm.bak"/>-->
+<!--	<table-filter match-schema=".*" match-name=".*" package="archetype.it.pm.bak"/>-->
+<!--	 <table-filter match-schema=".*" match-name="t_common_dic" exclude="true"/>-->
+	 <table-filter match-schema=".*" match-name="t_common_seq" package="archetype.it.common.seq"/> 
+<!--<table-filter match-schema=".*" match-name="t_sm_server" package="archetype.it.sm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_sm_datasource" package="archetype.it.sm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_user" package="archetype.it.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_organization" package="archetype.it.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_userorg" package="archetype.it.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_rp_.*" package="archetype.it.rp"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_.*" package="archetype.it.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="act_.*" package="archetype.it.wf"/>-->
+<!--<table-filter match-schema=".*" match-name="t_wf_bizprocmap" package="archetype.it.wf"/>-->
+<!--<table-filter match-schema=".*" match-name="t_demo_application" package="archetype.it.wf.demo"/>-->
+<table-filter match-schema=".*" match-name="T_WF_EMAILTEMP" package="archetype.it.framework.wf"/>
+</hibernate-reverse-engineering>
