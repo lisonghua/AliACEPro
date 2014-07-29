@@ -9,7 +9,7 @@
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<bean id="permissionRulesTemplate"
-		class="${groupId}.framework.extend.jrules.StatefulKnowledgeSessionTemplate">
+		class="${package}.framework.extend.jrules.StatefulKnowledgeSessionTemplate">
 		<!-- 使用dsl的版本 -->
 		<property name="dslFile" value="classpath:rules/permission.dsl" />
 		<property name="dslrFiles" value="classpath:rules/permission.dslr" />

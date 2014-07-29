@@ -13,7 +13,7 @@
 	import="org.springframework.security.authentication.DisabledException"%>
 <%@ page
 	import="java.util.Locale"%>
-<%@ page import="${groupId}.framework.common.utils.LocalizeUtil" %>
+<%@ page import="${package}.framework.common.utils.LocalizeUtil" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML ${version} Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

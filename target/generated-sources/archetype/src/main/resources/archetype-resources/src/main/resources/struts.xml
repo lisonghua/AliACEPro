@@ -7,7 +7,7 @@
 <struts>
 	<constant name="struts.convention.default.parent.package" value="crud-default" />
 	<constant name="struts.convention.package.locators" value="web" />
-	<constant name="struts.convention.package.locators.basePackage" value="${groupId}" />
+	<constant name="struts.convention.package.locators.basePackage" value="${package}" />
 	<constant name="struts.convention.action.includeJars" value=".*/framework-bin-${version}.*?jar(!/)?" />
 
 	<!-- 用于CRUD Action的parent package -->

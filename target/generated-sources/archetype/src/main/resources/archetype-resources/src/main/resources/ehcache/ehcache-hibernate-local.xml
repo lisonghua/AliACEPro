@@ -11,6 +11,6 @@
 		timeToIdleSeconds="300" timeToLiveSeconds="300" overflowToDisk="false" diskPersistent="false" />
 
 	<!-- Special objects setting. -->
-<!--	<cache name="${groupId}.pm.User" maxElementsInMemory="10000"-->
+<!--	<cache name="${package}.pm.User" maxElementsInMemory="10000"-->
 <!--		memoryStoreEvictionPolicy="LRU" eternal="true" diskPersistent="false" overflowToDisk="true" maxElementsOnDisk="1000000" />-->
 </ehcache>

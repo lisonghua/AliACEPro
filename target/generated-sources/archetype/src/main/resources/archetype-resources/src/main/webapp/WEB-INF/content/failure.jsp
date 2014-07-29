@@ -11,7 +11,7 @@
 <%@ page
 	import="org.springframework.security.authentication.DisabledException"%>
 <%@ page import="java.util.Locale"%>
-<%@ page import="${groupId}.framework.common.utils.LocalizeUtil"%>
+<%@ page import="${package}.framework.common.utils.LocalizeUtil"%>
 <%
 	AuthenticationException exception = (AuthenticationException) session
 			.getAttribute(AbstractAuthenticationProcessingFilter.SPRING_SECURITY_LAST_EXCEPTION_KEY);

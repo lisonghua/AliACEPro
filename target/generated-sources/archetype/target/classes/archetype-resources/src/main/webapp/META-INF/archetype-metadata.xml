@@ -129,6 +129,7 @@
 			<directory></directory>
 			<includes>
 				<include>create-archetype.bat</include>
+				<include>install-archetype.bat</include>
 				<include>tomcat-deploy.bat</include>
 			</includes>
 		</fileSet>

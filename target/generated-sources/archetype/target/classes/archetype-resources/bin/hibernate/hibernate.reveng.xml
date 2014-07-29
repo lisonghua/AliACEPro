@@ -8,19 +8,19 @@
 <!--	<type-mapping>-->
 <!--		<sql-type jdbc-type="NUMBER" hibernate-type="integer" ></sql-type>-->
 <!--	</type-mapping>-->
-<!--	<table-filter match-schema=".*" match-name="t_pm_privilege" package="${groupId}.pm.bak"/>-->
-<!--	<table-filter match-schema=".*" match-name=".*" package="${groupId}.pm.bak"/>-->
+<!--	<table-filter match-schema=".*" match-name="t_pm_privilege" package="${package}.pm.bak"/>-->
+<!--	<table-filter match-schema=".*" match-name=".*" package="${package}.pm.bak"/>-->
 <!--	 <table-filter match-schema=".*" match-name="t_common_dic" exclude="true"/>-->
-	 <table-filter match-schema=".*" match-name="t_common_seq" package="${groupId}.common.seq"/> 
-<!--<table-filter match-schema=".*" match-name="t_sm_server" package="${groupId}.sm"/>-->
-<!--<table-filter match-schema=".*" match-name="t_sm_datasource" package="${groupId}.sm"/>-->
-<!--<table-filter match-schema=".*" match-name="t_pm_user" package="${groupId}.pm"/>-->
-<!--<table-filter match-schema=".*" match-name="t_pm_organization" package="${groupId}.pm"/>-->
-<!--<table-filter match-schema=".*" match-name="t_pm_userorg" package="${groupId}.pm"/>-->
-<!--<table-filter match-schema=".*" match-name="t_rp_.*" package="${groupId}.rp"/>-->
-<!--<table-filter match-schema=".*" match-name="t_pm_.*" package="${groupId}.pm"/>-->
-<!--<table-filter match-schema=".*" match-name="act_.*" package="${groupId}.wf"/>-->
-<!--<table-filter match-schema=".*" match-name="t_wf_bizprocmap" package="${groupId}.wf"/>-->
-<!--<table-filter match-schema=".*" match-name="t_demo_application" package="${groupId}.wf.demo"/>-->
-<table-filter match-schema=".*" match-name="T_WF_EMAILTEMP" package="${groupId}.framework.wf"/>
+	 <table-filter match-schema=".*" match-name="t_common_seq" package="${package}.common.seq"/> 
+<!--<table-filter match-schema=".*" match-name="t_sm_server" package="${package}.sm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_sm_datasource" package="${package}.sm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_user" package="${package}.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_organization" package="${package}.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_userorg" package="${package}.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="t_rp_.*" package="${package}.rp"/>-->
+<!--<table-filter match-schema=".*" match-name="t_pm_.*" package="${package}.pm"/>-->
+<!--<table-filter match-schema=".*" match-name="act_.*" package="${package}.wf"/>-->
+<!--<table-filter match-schema=".*" match-name="t_wf_bizprocmap" package="${package}.wf"/>-->
+<!--<table-filter match-schema=".*" match-name="t_demo_application" package="${package}.wf.demo"/>-->
+<table-filter match-schema=".*" match-name="T_WF_EMAILTEMP" package="${package}.framework.wf"/>
 </hibernate-reverse-engineering>

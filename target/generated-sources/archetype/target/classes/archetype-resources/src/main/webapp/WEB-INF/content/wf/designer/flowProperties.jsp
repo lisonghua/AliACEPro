@@ -35,12 +35,14 @@ jq(function(){
 		//sortName:'id',
 	    //sortOrder:'asc',
 	    striped:true,
+	    fitColumns:true,
 	    toolbar:[{
 	        text:'New',
 	        iconCls:'icon-add',
 	        handler:function(){
 	    		_listener_win.window('open');
 	    		//_listener_frame.src="";
+	    		executionListenerId=null;
 	    		_listener_win.window('refresh','${symbol_dollar}{ctx}/wf/procdef/procdef!forLineListenerConfig.action');
 	    		//alert(_listener_frame.document.body.innerHTML);
 	        }
@@ -55,11 +57,13 @@ function listenerActionBt(value,rowData,rowIndex){
 	return e+'&nbsp;'+d;
 }
 function editListener(id){
+	executionListenerId=id;
 	_listener_win.window('open');
 	_listener_win.window('refresh','${symbol_dollar}{ctx}/wf/procdef/procdef!forLineListenerConfig.action?listenerId='+id);
 }
 function deleteListener(id){
 	line.deleteListener(id);
+	executionListenerId=null;
 	loadLineListeners();
 }
 function saveLineProperties(){
@@ -71,6 +75,7 @@ function saveLineProperties(){
 	jq.messager.alert('Info','Save Successfully!','info');
 }
 function populateLineProperites(){
+	//alert(line.lineId);
 	jq('${symbol_pound}id').val(line.lineId);
 	jq('${symbol_pound}name').val(line.lineName);
 	jq('${symbol_pound}condition').val(line.condition);
@@ -127,7 +132,7 @@ function loadLineListeners(){
 					</tr>
 				</table>
 			</div>
-			<div id="listeners" title="Listeners" style="overflow: hidden;">
+			<div id="listeners" title="Listeners" style="overflow: hidden;padding:5px;">
 				<table id="line-listeners-list">
 					<thead>
 					<tr>

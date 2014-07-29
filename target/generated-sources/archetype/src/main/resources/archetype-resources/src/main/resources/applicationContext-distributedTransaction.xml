@@ -26,7 +26,7 @@
 	</bean>
 	
 	<!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入 -->
-	<context:component-scan base-package="${groupId}"
+	<context:component-scan base-package="${package}"
 		use-default-filters="false">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Repository" />
@@ -89,7 +89,7 @@
 		</property>
 		<property name="packagesToScan">
 			<list>
-				<value>${groupId}.framework.persistence.entity.**.*</value>
+				<value>${package}.framework.persistence.entity.**.*</value>
 			</list>
 		</property>
 	</bean>
@@ -112,7 +112,7 @@
 		</property>
 		<property name="packagesToScan">
 			<list>
-				<value>${groupId}.persistence.entity.**.*</value>
+				<value>${package}.persistence.entity.**.*</value>
 			</list>
 		</property>
 	</bean>

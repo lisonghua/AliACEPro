@@ -7,7 +7,6 @@
 <script type="text/javascript">
 <!--
 var listenerFieldsEditCount = 0;
-var listenerId="<%=request.getParameter("listenerId")%>";
 jq(function(){
 	
 	_listener_event_type=jq('${symbol_pound}listenerEventType').combobox({
@@ -133,8 +132,8 @@ function createNewListener(){
     return newListener;   
 }
 function getExsitingListener(){
-	if(listenerId != "" && listenerId != null && listenerId!="null"&&listenerId!="NULL"){
-		var listener = process.getListener(listenerId);
+	if(executionListenerId != "" && executionListenerId != null && executionListenerId!="null"&&executionListenerId!="NULL"){
+		var listener = process.getListener(executionListenerId);
 		return listener;
 	}
 }
@@ -171,7 +170,7 @@ function getListenerFieldsGridChangeRows(){
     return changesRows;
 }
 function saveListenerConfig(){
-	if(listenerId != "" && listenerId != null && listenerId!="null"&&listenerId!="NULL"){
+	if(executionListenerId != "" && executionListenerId != null && executionListenerId!="null"&&executionListenerId!="NULL"){
 		var listener = getExsitingListener();
 		var r = updateExistingListener(listener);
 		if(!r)return;		
@@ -252,8 +251,8 @@ function updateExistingListener(listener){
 }
 
 function populateListenerProperties(){
-	if(listenerId != "" && listenerId != null && listenerId!="null"&&listenerId!="NULL"){
-		var listener = process.getListener(listenerId);
+	if(executionListenerId != "" && executionListenerId != null && executionListenerId!="null"&&executionListenerId!="NULL"){
+		var listener = process.getListener(executionListenerId);
 		_listener_event_type.combobox('setValue',listener.event);
 		var serviceType = listener.serviceType;
 		jq('input[name="listenerServiceType"]').each(function(i){

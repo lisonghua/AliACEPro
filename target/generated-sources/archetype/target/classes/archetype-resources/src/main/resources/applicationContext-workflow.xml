@@ -9,7 +9,7 @@
 	default-lazy-init="true">
 	<description>工作流引擎配置</description>
 	
-	<bean id="processEngineConfiguration" class="${groupId}.wf.engine.spring.Spring4HibernateTransactionManagerProcessEngineConfiguration">
+	<bean id="processEngineConfiguration" class="${package}.wf.engine.spring.Spring4HibernateTransactionManagerProcessEngineConfiguration">
 		<property name="databaseType" value="${symbol_dollar}{db.type}" /> 
 		<property name="dataSource" ref="dataSource"/>
 		<property name="transactionManager" ref="transactionManager" /> 
@@ -20,7 +20,7 @@
 <!--		<property name="mailServerPort" value="5025" />-->
 	</bean>
 	
-	<bean id="processEngine" class="${groupId}.wf.engine.spring.ExtProcessEngineFactoryBean"> 
+	<bean id="processEngine" class="${package}.wf.engine.spring.ExtProcessEngineFactoryBean"> 
     	<property name="processEngineConfiguration" ref="processEngineConfiguration" /> 
   	</bean>
   	

@@ -8,7 +8,7 @@
 
 	<description>Spring Jdbc Template配置</description>
 
-	<bean id="userDao" class="${groupId}.persistence.dao.pm.UserDao">
+	<bean id="userDao" class="${package}.persistence.dao.pm.UserDao">
 		<property name="searchUserByGroupSql">
 			<value><![CDATA[
 			SELECT U.USER_ID,U.SSO,U.NAME,U.EMAIL,U.USER_STATUS
@@ -35,7 +35,7 @@
 		</property>
 	</bean>
 	
-<!--	<bean id="moduleDao" class="${groupId}.pm.ModuleDao">-->
+<!--	<bean id="moduleDao" class="${package}.pm.ModuleDao">-->
 <!--		<property name="searchUserByModule">-->
 <!--			<value>-->
 <!--			<![CDATA[-->

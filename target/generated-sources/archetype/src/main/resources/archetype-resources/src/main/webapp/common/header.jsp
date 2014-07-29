@@ -5,9 +5,9 @@
 <%@page import="java.util.Locale" %>
 <%@page import="com.opensymphony.xwork2.interceptor.I18nInterceptor" %>
 <%@ page import="org.springside.modules.security.springsecurity.SpringSecurityUtils" %>
-<%@ page import="${groupId}.framework.service.login.LogonUser" %>
-<%@ page import="${groupId}.framework.common.constants.CommonConstant" %>
-<%@ page import="${groupId}.framework.extend.security.SsoAuthenticationProcessingFilter" %>
+<%@ page import="${package}.framework.service.login.LogonUser" %>
+<%@ page import="${package}.framework.common.constants.CommonConstant" %>
+<%@ page import="${package}.framework.extend.security.SsoAuthenticationProcessingFilter" %>
 <%@ include file="/common/meta.jsp" %>
 <!-- framework CSS -->
 <link href="${symbol_dollar}{ctx}/css/style.css" type="text/css" rel="stylesheet"/>

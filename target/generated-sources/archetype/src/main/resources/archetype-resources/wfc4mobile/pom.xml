@@ -6,10 +6,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>framework</artifactId>
-		<groupId>${groupId}</groupId>
+		<groupId>${package}</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>${groupId}</groupId>
+	<groupId>${package}</groupId>
 	<artifactId>wfc4mobile</artifactId>
 	<packaging>war</packaging>
 	<name>tianyaweixin Maven Webapp</name>
@@ -18,13 +18,13 @@
 	<dependencies>
 		<!-- framework -->
 		<dependency>
-			<groupId>${groupId}</groupId>
+			<groupId>${package}</groupId>
 			<artifactId>framework-bin</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- workflow -->
 		<dependency>
-			<groupId>${groupId}.workflow</groupId>
+			<groupId>${package}.workflow</groupId>
 			<artifactId>workflow-engine</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

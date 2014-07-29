@@ -7,7 +7,6 @@
 <script type="text/javascript">
 <!--
 var listenerFieldsEditCount = 0;
-var listenerId="<%=request.getParameter("listenerId")%>";
 jq(function(){
 	
 	_listener_event_type=jq('${symbol_pound}listenerEventType').combobox({
@@ -136,12 +135,12 @@ function refreshAllListenerFields(){
 	}
 }
 function createNewListener(){
-	var newListener = new draw2d.Task.Listener();
+	var newListener = new draw2d.UserTask.TaskListener();
     return newListener;   
 }
 function getExsitingListener(){
 	if(listenerId != "" && listenerId != null && listenerId!="null"&&listenerId!="NULL"){
-		var listener = task.getListener(listenerId);
+		var listener = task.getTaskListener(listenerId);
 		return listener;
 	}
 }
@@ -211,7 +210,7 @@ function insertNewListener(listener){
     		listener.fields.add(field);  
         }   
     }
-	task.listeners.add(listener);
+	task.taskListeners.add(listener);
 	loadTaskListeners();
 	return true;
 }
@@ -260,8 +259,8 @@ function updateExistingListener(listener){
 
 function populateListenerProperties(){
 	if(listenerId != "" && listenerId != null && listenerId!="null"&&listenerId!="NULL"){
-		var listener = task.getListener(listenerId);
-		_listener_event_type.combobox('setValue',listener.event);
+		var listener = task.getTaskListener(listenerId);
+		_listener_event_type.combobox('select',listener.event);
 		var serviceType = listener.serviceType;
 		jq('input[name="listenerServiceType"]').each(function(i){
 			if(this.value==serviceType){
@@ -303,6 +302,7 @@ function closeTaskListenerWin(){
 					<option value="create">Create</option>
 					<option value="assignment">Assignment</option>
 					<option value="complete">Complete</option>
+					<option value="all">All</option>
 				</select>
 			</td>
 		</tr>

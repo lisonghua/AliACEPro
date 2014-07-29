@@ -18,19 +18,19 @@
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 
-		<javaModelGenerator targetPackage="${groupId}.persistence.mybatis.model"
+		<javaModelGenerator targetPackage="${package}.persistence.mybatis.model"
 			targetProject="generated">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
-		<sqlMapGenerator targetPackage="${groupId}.persistence.mybatis.sqlmap"
+		<sqlMapGenerator targetPackage="${package}.persistence.mybatis.sqlmap"
 			targetProject="generated">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="${groupId}.persistence.mybatis.dao" targetProject="generated">
+			targetPackage="${package}.persistence.mybatis.dao" targetProject="generated">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 

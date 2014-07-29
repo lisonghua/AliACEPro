@@ -10,7 +10,8 @@ jq(function(){
 	_task_candidate_users_list=jq('${symbol_pound}task-candidate-users-list').datagrid({
 		title:"Candidate Users",
 		singleSelect:true,
-		height:450,
+		height:200,
+		//fit:true,
 		rownumbers:true,
 		striped:true,
 		toolbar:[{

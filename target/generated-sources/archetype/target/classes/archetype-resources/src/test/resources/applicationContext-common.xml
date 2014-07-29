@@ -28,7 +28,7 @@
 	</bean>
 
 	<!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入 -->
-	<context:component-scan base-package="${groupId}"
+	<context:component-scan base-package="${package}"
 		use-default-filters="false">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Repository" />
@@ -85,7 +85,7 @@
 		</property>
 		<property name="packagesToScan">
 			<list>
-				<value>${groupId}.**.entity.</value>
+				<value>${package}.**.entity.</value>
 			</list>
 		</property>
 	</bean>
@@ -137,7 +137,7 @@
 		<property name="templateLoaderPaths">
 			<list>
 				<value>classpath:/mailTemplates/</value>
-				<!-- <value>classpath:/mailTemplates/com/dalian/genpact/example</value> -->
+				<!-- <value>classpath:/mailTemplates/${packageInPathFormat}/example</value> -->
 			</list>
 		</property>
 		<property name="preferFileSystemAccess" value="false"></property>

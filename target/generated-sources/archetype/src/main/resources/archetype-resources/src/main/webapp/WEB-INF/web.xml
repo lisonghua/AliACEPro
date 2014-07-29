@@ -62,7 +62,7 @@
 
 	<filter>
 		<filter-name>LoggingFilter</filter-name>
-		<filter-class>${groupId}.framework.common.servlet.filter.LoggingFilter</filter-class>
+		<filter-class>${package}.framework.common.servlet.filter.LoggingFilter</filter-class>
 		<init-param>
 			<param-name>excludeURIPattern</param-name>
 			<param-value>/css|/image|/imgages|/img|/theme|/themes|/js|/javascript</param-value>
@@ -142,7 +142,7 @@
 	</listener>
 
 	<listener>
-		<listener-class>${groupId}.framework.common.servlet.listener.LoggingListener</listener-class>
+		<listener-class>${package}.framework.common.servlet.listener.LoggingListener</listener-class>
 	</listener>
 	
 	<!-- Jersey Servlet 配置 -->
@@ -161,7 +161,7 @@
 	
 	<servlet>
 		<servlet-name>uploadServlet</servlet-name>
-		<servlet-class>${groupId}.framework.common.servlet.upload.UploadServlet</servlet-class>
+		<servlet-class>${package}.framework.common.servlet.upload.UploadServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>

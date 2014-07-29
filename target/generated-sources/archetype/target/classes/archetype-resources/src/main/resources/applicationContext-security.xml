@@ -74,19 +74,19 @@
 		</sec:authentication-provider>
 	</sec:authentication-manager>
 
-	<bean id="accessAuthenticationFilter" class="${groupId}.framework.extend.security.AccessAuthenticationFilter">
+	<bean id="accessAuthenticationFilter" class="${package}.framework.extend.security.AccessAuthenticationFilter">
 		<property name="authenticationManager" ref="authenticationManager"></property>
 		<!-- 访问决策器，决定某个用户具有的角色，是否有足够的权限去访问某个资源     -->
 		<property name="accessDecisionManager" ref="urlAccessDecisionManager"></property>
 		<property name="securityMetadataSource" ref="invocationSecurityMetadataSourceService"></property>
 	</bean>
 	
-	<bean id="urlAccessDecisionManager" class="${groupId}.framework.extend.security.UrlAccessDecisionManager"></bean>
+	<bean id="urlAccessDecisionManager" class="${package}.framework.extend.security.UrlAccessDecisionManager"></bean>
 	<!-- 资源源数据定义，将所有的资源和权限对应关系建立起来，即定义某一资源可以被哪些角色访问     -->   
-	<bean id="invocationSecurityMetadataSourceService" init-method="loadResourceDefine" class="${groupId}.framework.extend.security.InvocationSecurityMetadataSourceService">
+	<bean id="invocationSecurityMetadataSourceService" init-method="loadResourceDefine" class="${package}.framework.extend.security.InvocationSecurityMetadataSourceService">
 	</bean>
 	
-	<bean id="accessLogoutFilter"  class="${groupId}.framework.extend.security.AccessLogoutFilter">
+	<bean id="accessLogoutFilter"  class="${package}.framework.extend.security.AccessLogoutFilter">
 		<constructor-arg value="/login.action"></constructor-arg>
 		<constructor-arg>
 			<list>
@@ -95,5 +95,5 @@
 		</constructor-arg>
 	</bean>
 	
-	<bean id="loadSecuritySourceFilter" class="${groupId}.framework.extend.security.LoadSecuritySourceFilter"></bean>
+	<bean id="loadSecuritySourceFilter" class="${package}.framework.extend.security.LoadSecuritySourceFilter"></bean>
 </beans>

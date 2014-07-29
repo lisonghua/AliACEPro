@@ -48,7 +48,7 @@
 	</bean>
 
 	<!--动态选择数据源 -->
-	<bean id="dataSource" class="${groupId}.framework.common.db.DynamicDataSource">
+	<bean id="dataSource" class="${package}.framework.common.db.DynamicDataSource">
 		<property name="targetDataSources">
 			<map key-type="java.lang.String">
 				<entry key="1" value-ref="dataSource1" />
